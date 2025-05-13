@@ -60,18 +60,52 @@
                     </select>
                 </div>
             </div>
-            <div class="mt-4 flex justify-end space-x-4">
-                <button id="addToCalendar" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                    <i class="fas fa-calendar-plus mr-2"></i>Add to Calendar
-                </button>
-                <button id="downloadIcs" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                    <i class="fas fa-download mr-2"></i>Download Selected Events
-                </button>
+        </div>
+
+        <!-- Selection Overview Panel -->
+        <div id="selectionOverview" class="fixed bottom-0 left-0 right-0 bg-black shadow-lg border-t border-gray-200 p-4 transform transition-transform duration-300 translate-y-full">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-between">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-8">
+                            <div class="flex items-center space-x-4">
+                                <p class="text-gray-700">
+                                    <span class="font-medium">Total Events:</span>
+                                    <span id="totalEvents" class="ml-2">0</span>
+                                </p>
+                                <p class="text-gray-700">
+                                    <span class="font-medium">Total Duration:</span>
+                                    <span id="totalDuration" class="ml-2">0 hours</span>
+                                </p>
+                            </div>
+                            <button id="toggleDetails" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium flex items-center">
+                                <span>Details</span>
+                                <i class="fas fa-chevron-down ml-1 transform transition-transform duration-200"></i>
+                            </button>
+                        </div>
+                        <div id="stageDetails" class="mt-4 hidden">
+                            <div class="border-t border-gray-200 pt-4">
+                                <h4 class="text-sm font-medium text-gray-600 mb-2">Events by Stage</h4>
+                                <div id="stageStats" class="space-y-2">
+                                    <!-- Stage statistics will be inserted here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 ml-8">
+                        <button id="addToCalendar" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <i class="fas fa-calendar-plus mr-2"></i>Add to Calendar
+                        </button>
+                        <button id="downloadIcs" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <i class="fas fa-download mr-2"></i>Download Selected Events
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Events Display -->
-        <div id="eventsContainer" class="bg-white rounded-lg shadow-md p-4">
+        <div id="eventsContainer" class="bg-white rounded-lg shadow-md p-4 mb-24">
             <!-- Events will be dynamically inserted here -->
         </div>
     </div>
@@ -163,6 +197,19 @@
             document.getElementById('selectionFilter').addEventListener('change', () => filterEvents(events));
             document.getElementById('downloadIcs').addEventListener('click', () => downloadSelectedEvents(events));
             document.getElementById('addToCalendar').addEventListener('click', () => addToCalendar(events));
+            
+            // Add toggle details event listener
+            document.getElementById('toggleDetails').addEventListener('click', () => {
+                const detailsSection = document.getElementById('stageDetails');
+                const toggleIcon = document.querySelector('#toggleDetails i');
+                if (detailsSection.classList.contains('hidden')) {
+                    detailsSection.classList.remove('hidden');
+                    toggleIcon.classList.add('rotate-180');
+                } else {
+                    detailsSection.classList.add('hidden');
+                    toggleIcon.classList.remove('rotate-180');
+                }
+            });
         }
 
         // Filter events based on selected criteria
@@ -203,6 +250,61 @@
             addToCalendarButton.disabled = isDisabled;
         }
 
+        // Update selection overview
+        function updateSelectionOverview(events) {
+            const overviewPanel = document.getElementById('selectionOverview');
+            const selectedEvents = events.filter(event => window.selectedEvents.has(event.id));
+            
+            if (selectedEvents.length === 0) {
+                overviewPanel.classList.add('translate-y-full');
+                return;
+            }
+            
+            overviewPanel.classList.remove('translate-y-full');
+            
+            // Calculate statistics by stage
+            const stageStats = {};
+            selectedEvents.forEach(event => {
+                if (!stageStats[event.location]) {
+                    stageStats[event.location] = {
+                        count: 0,
+                        duration: 0
+                    };
+                }
+                stageStats[event.location].count++;
+                
+                // Parse duration
+                const duration = event.duration;
+                const hoursMatch = duration.match(/(\d+)H/);
+                const minutesMatch = duration.match(/(\d+)M/);
+                const hours = hoursMatch ? parseInt(hoursMatch[1]) : 0;
+                const minutes = minutesMatch ? parseInt(minutesMatch[1]) : 0;
+                stageStats[event.location].duration += hours + (minutes / 60);
+            });
+            
+            // Update stage statistics
+            const stageStatsContainer = document.getElementById('stageStats');
+            stageStatsContainer.innerHTML = Object.entries(stageStats)
+                .map(([stage, stats]) => `
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-700">${stage}</span>
+                        <div class="text-sm text-gray-600">
+                            <span>${stats.count} events</span>
+                            <span class="mx-2">•</span>
+                            <span>${stats.duration.toFixed(1)} hours</span>
+                        </div>
+                    </div>
+                `).join('');
+            
+            // Update total statistics
+            const totalEvents = selectedEvents.length;
+            const totalDuration = Object.values(stageStats)
+                .reduce((sum, stats) => sum + stats.duration, 0);
+            
+            document.getElementById('totalEvents').textContent = totalEvents;
+            document.getElementById('totalDuration').textContent = `${totalDuration.toFixed(1)} hours`;
+        }
+
         // Toggle event selection
         function toggleEventSelection(eventId) {
             console.log('toggleEventSelection called with eventId:', eventId);
@@ -218,6 +320,7 @@
             
             console.log('Current selectedEvents after toggle:', Array.from(window.selectedEvents));
             updateDownloadButton();
+            updateSelectionOverview(window.allEvents);
             
             // Re-filter events to update the view
             filterEvents(window.allEvents);
