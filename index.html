@@ -66,19 +66,9 @@
         <div id="selectionOverview" class="fixed bottom-0 left-0 right-0 bg-black shadow-lg border-t border-gray-200 p-4 transform transition-transform duration-300 translate-y-full">
             <div class="container mx-auto">
                 <div class="space-y-4">
-                    <div class="space-y-2">
-                        <p class="text-white">
-                            <span class="font-medium">Events Selected:</span>
-                            <span id="totalEvents" class="ml-2">0</span>
-                        </p>
-                        <p class="text-white">
-                            <span class="font-medium">Total Duration:</span>
-                            <span id="totalDuration" class="ml-2">0 hours</span>
-                        </p>
-                    </div>
                     <div>
                         <button id="toggleDetails" class="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                            <span>By stage</span>
+                            <span><span id="totalEvents" class="ml-2">0</span> in total,<span id="totalDuration" class="ml-2">0 hours</span></span>
                             <i class="fas fa-chevron-down ml-1 transform transition-transform duration-200"></i>
                         </button>
                         <div id="stageDetails" class="mt-4 hidden">
@@ -89,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-end space-x-4">
+                    <div class="flex space-x-4">
                         <button id="addToCalendar" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
                             <i class="fas fa-calendar-plus mr-2"></i>Add to Calendar
                         </button>
