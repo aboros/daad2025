@@ -1,507 +1,599 @@
 {
   "events": [
     {
-      "summary": "Moonbase Patel Disco",
-      "startTime": "2025-07-23T20:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Tolo & Falcao",
-      "startTime": "2025-07-23T22:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Gerd Janson",
-      "startTime": "2025-07-24T00:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Mano Le Tough",
-      "startTime": "2025-07-24T03:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Ferenc Szanaty",
-      "startTime": "2025-07-24T08:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Garpo",
-      "startTime": "2025-07-24T10:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Kirill & Kernel",
-      "startTime": "2025-07-24T12:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Vatsanah & Dj Reload",
-      "startTime": "2025-07-24T15:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Opening Ceremony",
       "startTime": "2025-07-24T19:30:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "duration": "PT1H",
+      "summary": "Opening Ceremony",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Octave One",
       "startTime": "2025-07-24T20:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "duration": "PT2H30M",
+      "summary": "Octave One",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
+      "startTime": "2025-07-24T21:30:00",
+      "duration": "PT2H30M",
       "summary": "ISU",
-      "startTime": "2025-07-24T21:30:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "UNKLE",
-      "startTime": "2025-07-24T21:30:00",
+      "startTime": "2025-07-24T23:00:00",
       "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
       "summary": "Speedy J",
-      "startTime": "2025-07-24T23:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Cassy",
-      "startTime": "2025-07-24T23:00:00",
+      "startTime": "2025-07-25T01:00:00",
       "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Acid Pauli",
-      "startTime": "2025-07-24T23:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
       "summary": "Dave Clark",
-      "startTime": "2025-07-25T01:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Magda",
-      "startTime": "2025-07-25T01:00:00",
+      "startTime": "2025-07-25T03:00:00",
       "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Adam Ten",
-      "startTime": "2025-07-25T01:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
       "summary": "D. Dan",
-      "startTime": "2025-07-25T03:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Chaos in the CBD",
-      "startTime": "2025-07-25T03:00:00",
+      "startTime": "2025-07-25T05:00:00",
       "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
       "summary": "Philippa Pacho",
-      "startTime": "2025-07-25T05:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Grema",
-      "startTime": "2025-07-25T05:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Peter Bernath",
-      "startTime": "2025-07-25T06:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Rising Love Records",
-      "startTime": "2025-07-25T08:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Stee",
-      "startTime": "2025-07-25T10:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Telemala",
-      "startTime": "2025-07-25T11:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Modul aka Mango",
-      "startTime": "2025-07-25T12:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Adis is OK",
-      "startTime": "2025-07-25T13:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Hiboo & Dinza",
-      "startTime": "2025-07-25T14:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Vedat Akdag",
-      "startTime": "2025-07-25T15:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Mantra",
-      "startTime": "2025-07-25T18:00:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "AIWA",
-      "startTime": "2025-07-25T19:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
+      "startTime": "2025-07-25T20:00:00",
+      "duration": "PT2H30M",
       "summary": "Indirect Movement",
-      "startTime": "2025-07-25T20:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Netam",
-      "startTime": "2025-07-25T20:00:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Out of Place Artefacts",
-      "startTime": "2025-07-25T20:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Peter van Hosen",
       "startTime": "2025-07-25T21:30:00",
       "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "summary": "Peter van Hosen",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Hraach",
-      "startTime": "2025-07-25T22:00:00",
+      "startTime": "2025-07-25T23:30:00",
       "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Blazej Malinowski",
-      "startTime": "2025-07-25T22:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
       "summary": "Luke Slater",
-      "startTime": "2025-07-25T23:30:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Oliver Koletzki",
-      "startTime": "2025-07-25T23:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Tobias",
-      "startTime": "2025-07-26T00:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Jeff Mills",
       "startTime": "2025-07-26T01:30:00",
       "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "summary": "Jeff Mills",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Aurora Halal",
-      "startTime": "2025-07-26T02:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Answer Code Request",
       "startTime": "2025-07-26T03:30:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "duration": "PT1H30M",
+      "summary": "Answer Code Request",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "TSU",
-      "startTime": "2025-07-26T04:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Adriana Lopez",
       "startTime": "2025-07-26T05:00:00",
       "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "summary": "Adriana Lopez",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Switch Nollie",
-      "startTime": "2025-07-26T06:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Candyman de Marquis",
-      "startTime": "2025-07-26T08:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "James Cole",
-      "startTime": "2025-07-26T10:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Daniel Moritz",
-      "startTime": "2025-07-26T10:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Kühl",
-      "startTime": "2025-07-26T12:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Daniel Santiago",
-      "startTime": "2025-07-26T12:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Chriss Ronson",
-      "startTime": "2025-07-26T14:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Daniel Ban",
-      "startTime": "2025-07-26T14:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Budai",
-      "startTime": "2025-07-26T16:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "OIEE",
-      "startTime": "2025-07-26T18:00:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Imre Kiss",
-      "startTime": "2025-07-26T19:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Fine Cut Bodies",
-      "startTime": "2025-07-26T19:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Fourk",
       "startTime": "2025-07-26T20:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "duration": "PT2H30M",
+      "summary": "Fourk",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Crimson",
-      "startTime": "2025-07-26T21:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Freq Nasty",
       "startTime": "2025-07-26T21:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
+      "duration": "PT1H30M",
       "summary": "Katamii",
-      "startTime": "2025-07-26T21:30:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Legowelt",
       "startTime": "2025-07-26T23:00:00",
       "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
       "summary": "Quelza",
-      "startTime": "2025-07-26T23:00:00",
-      "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Goldie & Medic Mc",
-      "startTime": "2025-07-26T23:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Marco Shuttle",
-      "startTime": "2025-07-27T00:30:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "DVS1",
       "startTime": "2025-07-27T01:00:00",
       "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "summary": "DVS1",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Shaymi",
-      "startTime": "2025-07-27T01:30:00",
-      "duration": "PT2H",
-      "location": "DRAGON NEST"
-    },
-    {
-      "summary": "Polygonia",
-      "startTime": "2025-07-27T02:30:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Marron",
       "startTime": "2025-07-27T03:00:00",
       "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "summary": "Marron",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "AzaMirmur",
-      "startTime": "2025-07-27T04:30:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
-    },
-    {
-      "summary": "Inox Traxx",
       "startTime": "2025-07-27T05:00:00",
       "duration": "PT2H",
-      "location": "DAAD STAGE"
+      "summary": "Inox Traxx",
+      "location": "DAAD STAGE",
+      "description": ""
     },
     {
-      "summary": "Roland Handrick",
+      "startTime": "2025-07-24T21:00:00",
+      "duration": "PT2H",
+      "summary": "Jaffa Surfa",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T23:00:00",
+      "duration": "PT2H",
+      "summary": "Cassy",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T01:00:00",
+      "duration": "PT2H",
+      "summary": "Magda",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T03:00:00",
+      "duration": "PT2H",
+      "summary": "Chaos in the CBD",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T05:00:00",
+      "duration": "PT1H30M",
+      "summary": "Grema",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T06:30:00",
+      "duration": "PT1H30M",
+      "summary": "Peter Bernath",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T19:00:00",
+      "duration": "PT1H",
+      "summary": "AIWA",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T20:00:00",
+      "duration": "PT2H",
+      "summary": "Out of Place Artefacts",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T22:00:00",
+      "duration": "PT2H",
+      "summary": "Blazej Malinowski",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T00:00:00",
+      "duration": "PT2H",
+      "summary": "Tobias",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T02:00:00",
+      "duration": "PT2H",
+      "summary": "Aurora Halal",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T04:00:00",
+      "duration": "PT2H",
+      "summary": "TSU",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T06:00:00",
+      "duration": "PT2H",
+      "summary": "Switch Nollie",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T19:00:00",
+      "duration": "PT2H",
+      "summary": "Imre Kiss",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T21:00:00",
+      "duration": "PT2H",
+      "summary": "Crimson",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T23:00:00",
+      "duration": "PT1H30M",
+      "summary": "Legowelt",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T00:30:00",
+      "duration": "PT2H",
+      "summary": "Marco Shuttle",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T02:30:00",
+      "duration": "PT2H",
+      "summary": "Polygonia",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T04:30:00",
+      "duration": "PT2H",
+      "summary": "AzaMirmur",
+      "location": "THE DOME",
+      "description": ""
+    },
+    {
       "startTime": "2025-07-27T06:30:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
+      "duration": "PT1H30M",
+      "summary": "Roland Handrick",
+      "location": "THE DOME",
+      "description": ""
     },
     {
-      "summary": "Woody & GraBo",
-      "startTime": "2025-07-27T08:00:00",
-      "duration": "PT2H",
-      "location": "AM/BEACH"
-    },
-    {
-      "summary": "Booshanka",
-      "startTime": "2025-07-27T10:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Metha",
-      "startTime": "2025-07-27T10:30:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Baladi",
-      "startTime": "2025-07-27T12:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Secret Factory",
-      "startTime": "2025-07-27T12:30:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "MEO Culpa & Zakharov",
-      "startTime": "2025-07-27T14:00:00",
-      "duration": "PT2H",
-      "location": "COOKING GROOVE"
-    },
-    {
-      "summary": "Zvezda Beta",
       "startTime": "2025-07-27T15:00:00",
       "duration": "PT2H",
-      "location": "THE DOME"
+      "summary": "Zvezda Beta",
+      "location": "THE DOME",
+      "description": ""
     },
     {
-      "summary": "Carl Craig",
       "startTime": "2025-07-27T17:00:00",
-      "duration": "PT2H",
-      "location": "THE DOME"
+      "duration": "PT3H",
+      "summary": "Carl Craig",
+      "location": "THE DOME",
+      "description": ""
     },
     {
-      "summary": "Mira",
+      "startTime": "2025-07-24T21:30:00",
+      "duration": "PT2H",
+      "summary": "UNKLE",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T23:30:00",
+      "duration": "PT2H",
+      "summary": "Acid Pauli",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T01:30:00",
+      "duration": "PT2H",
+      "summary": "Adam Ten",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T18:00:00",
+      "duration": "PT2H",
+      "summary": "Mantra",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T20:00:00",
+      "duration": "PT2H",
+      "summary": "Netam",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T22:00:00",
+      "duration": "PT1H30M",
+      "summary": "Hraach",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T23:30:00",
+      "duration": "PT3H",
+      "summary": "Oliver Koletzki",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T18:00:00",
+      "duration": "PT1H30M",
+      "summary": "OIEE",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T19:30:00",
+      "duration": "PT2H",
+      "summary": "Fine Cut Bodies",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T21:30:00",
+      "duration": "PT2H",
+      "summary": "Freq Nasty",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T23:30:00",
+      "duration": "PT2H",
+      "summary": "Goldie & Medic Mc",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T01:30:00",
+      "duration": "PT1H30M",
+      "summary": "Shaymi",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
       "startTime": "2025-07-27T19:30:00",
       "duration": "PT2H",
-      "location": "DRAGON NEST"
+      "summary": "Mira",
+      "location": "DRAGON NEST",
+      "description": ""
     },
     {
-      "summary": "WHOMADEWHO",
       "startTime": "2025-07-27T21:30:00",
       "duration": "PT2H",
-      "location": "DRAGON NEST"
+      "summary": "WHOMADEWHO",
+      "location": "DRAGON NEST",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-23T20:00:00",
+      "duration": "PT2H",
+      "summary": "Moonbase Patel Disco",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-23T22:00:00",
+      "duration": "PT2H",
+      "summary": "Tolo & Falcao",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T00:00:00",
+      "duration": "PT3H",
+      "summary": "Gerd Janson",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T03:00:00",
+      "duration": "PT3H",
+      "summary": "Mano Le Tough",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T10:00:00",
+      "duration": "PT2H",
+      "summary": "Stee",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T12:00:00",
+      "duration": "PT2H",
+      "summary": "Modul aka Mango",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T14:00:00",
+      "duration": "PT2H",
+      "summary": "Hiboo & Dinza",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T10:00:00",
+      "duration": "PT2H",
+      "summary": "Daniel Moritz",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T12:00:00",
+      "duration": "PT2H",
+      "summary": "Daniel Santiago",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T14:00:00",
+      "duration": "PT2H",
+      "summary": "Daniel Ban",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T10:00:00",
+      "duration": "PT2H",
+      "summary": "Booshanka",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T12:00:00",
+      "duration": "PT2H",
+      "summary": "Baladi",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T14:00:00",
+      "duration": "PT2H",
+      "summary": "MEO Culpa & Zakharov",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-28T00:00:00",
+      "duration": "PT4H",
+      "summary": "OVERCOOKING",
+      "location": "COOKING GROOVE",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T08:00:00",
+      "duration": "PT2H",
+      "summary": "Ferenc Szanaty",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T10:00:00",
+      "duration": "PT2H",
+      "summary": "Garpo",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T12:00:00",
+      "duration": "PT3H",
+      "summary": "Kirill & Kernel",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-24T15:00:00",
+      "duration": "PT3H",
+      "summary": "Vatsanah & Dj Reload",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T08:00:00",
+      "duration": "PT3H",
+      "summary": "Rising Love Records",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T11:00:00",
+      "duration": "PT2H",
+      "summary": "Telemala",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T13:00:00",
+      "duration": "PT2H",
+      "summary": "Adis is OK",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-25T15:00:00",
+      "duration": "PT3H",
+      "summary": "Vedat Akdag",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T08:00:00",
+      "duration": "PT2H",
+      "summary": "Candyman de Marquis",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T10:00:00",
+      "duration": "PT2H",
+      "summary": "James Cole",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T12:00:00",
+      "duration": "PT2H",
+      "summary": "Kühl",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T14:00:00",
+      "duration": "PT2H",
+      "summary": "Chriss Ronson",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-26T16:00:00",
+      "duration": "PT2H",
+      "summary": "Budai",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T08:00:00",
+      "duration": "PT2H30M",
+      "summary": "Woody & GraBo",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T10:30:00",
+      "duration": "PT2H",
+      "summary": "Metha",
+      "location": "AM/BEACH",
+      "description": ""
+    },
+    {
+      "startTime": "2025-07-27T12:30:00",
+      "duration": "PT2H30M",
+      "summary": "Secret Factory",
+      "location": "AM/BEACH",
+      "description": ""
     }
-  ],
-  "metadata": {
-    "name": "DAAD Gathering - All Events",
-    "description": "DAAD Gathering 2025 - All Events",
-    "version": "2.0"
-  }
+  ]
 } 
