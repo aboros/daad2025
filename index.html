@@ -130,7 +130,7 @@
 
             // Populate date filter
             const dateFilter = document.getElementById('dateFilter');
-            uniqueDates.forEach(date => {
+            uniqueDates.sort().forEach(date => {
                 const option = document.createElement('option');
                 option.value = date;
                 option.textContent = new Date(date).toLocaleDateString('en-US', {
