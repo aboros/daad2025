@@ -197,9 +197,11 @@
                 const detailsSection = document.getElementById('stageDetails');
                 const toggleIcon = document.querySelector('#toggleDetails i');
                 if (detailsSection.classList.contains('hidden')) {
+                    window.sa_event('selection_details_opened');
                     detailsSection.classList.remove('hidden');
                     toggleIcon.classList.add('rotate-180');
                 } else {
+                    window.sa_event('selection_details_closed');
                     detailsSection.classList.add('hidden');
                     toggleIcon.classList.remove('rotate-180');
                 }
@@ -330,6 +332,7 @@ END:VCALENDAR`;
 
         // Download selected events as ICS file
         function downloadSelectedEvents(events) {
+            window.sa_event('download_ics');
             const icsContent = generateIcsContent(events);
             const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
             const link = document.createElement('a');
@@ -342,6 +345,7 @@ END:VCALENDAR`;
 
         // Add selected events directly to calendar
         function addToCalendar(events) {
+            window.sa_event('add_to_calendar');
             const icsContent = generateIcsContent(events);
             const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
             const url = URL.createObjectURL(blob);
