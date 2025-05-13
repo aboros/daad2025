@@ -68,11 +68,11 @@
                 <div class="space-y-4">
                     <div>
                         <button id="toggleDetails" class="text-white hover:text-gray-300 text-sm font-medium flex items-center">
-                            <span><span id="totalEvents" class="ml-2">0</span> in<span id="totalDuration" class="ml-2">0 hours</span></span>
+                            <span>Expand details of <span id="totalEvents">0</span> in <span id="totalDuration">0 hours</span></span>
                             <i class="fas fa-chevron-down ml-1 transform transition-transform duration-200"></i>
                         </button>
-                        <div id="stageDetails" class="mt-4 hidden">
-                            <div class="border-t border-gray-700 pt-4">
+                        <div id="stageDetails" class="mt-4 pb-8 hidden">
+                            <div class="border-t border-b border-gray-700 py-4">
                                 <div id="stageStats" class="space-y-2">
                                     <!-- Stage statistics will be inserted here -->
                                 </div>
@@ -413,17 +413,72 @@ END:VCALENDAR`;
         // Update stage statistics
         function updateStageStats(stageStats) {
             const stageStatsContainer = document.getElementById('stageStats');
-            stageStatsContainer.innerHTML = Object.entries(stageStats)
-                .map(([stage, stats]) => `
-                    <div class="flex justify-between items-center">
-                        <span class="text-white">${stage}</span>
-                        <div class="text-sm text-gray-400">
-                            <span>${stats.count} events</span>
-                            <span class="mx-2">•</span>
-                            <span>${stats.duration.toFixed(1)} hours</span>
-                        </div>
+            const selectedEvents = window.allEvents.filter(event => window.selectedEvents.has(event.id));
+            
+            // Calculate daily statistics
+            const dailyStats = {};
+            selectedEvents.forEach(event => {
+                const date = event.startTime.split('T')[0];
+                if (!dailyStats[date]) {
+                    dailyStats[date] = {
+                        count: 0,
+                        duration: 0
+                    };
+                }
+                dailyStats[date].count++;
+                
+                // Parse duration
+                const duration = event.duration;
+                const hoursMatch = duration.match(/(\d+)H/);
+                const minutesMatch = duration.match(/(\d+)M/);
+                const hours = hoursMatch ? parseInt(hoursMatch[1]) : 0;
+                const minutes = minutesMatch ? parseInt(minutesMatch[1]) : 0;
+                dailyStats[date].duration += hours + (minutes / 60);
+            });
+
+            // Sort dates
+            const sortedDates = Object.keys(dailyStats).sort();
+
+            stageStatsContainer.innerHTML = `
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-white font-medium mb-2">By Stage</h4>
+                        ${Object.entries(stageStats)
+                            .map(([stage, stats]) => `
+                                <div class="flex justify-between items-center">
+                                    <span class="text-white">${stage}</span>
+                                    <div class="text-sm text-gray-400">
+                                        <span>${stats.count} events</span>
+                                        <span class="mx-2">•</span>
+                                        <span>${stats.duration.toFixed(1)} hours</span>
+                                    </div>
+                                </div>
+                            `).join('')}
                     </div>
-                `).join('');
+                    <div class="border-t border-gray-700 pt-4">
+                        <h4 class="text-white font-medium mb-2">By Day</h4>
+                        ${sortedDates
+                            .map(date => {
+                                const stats = dailyStats[date];
+                                const formattedDate = new Date(date).toLocaleDateString('en-US', {
+                                    weekday: 'short',
+                                    month: 'short',
+                                    day: 'numeric'
+                                });
+                                return `
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-white">${formattedDate}</span>
+                                        <div class="text-sm text-gray-400">
+                                            <span>${stats.count} events</span>
+                                            <span class="mx-2">•</span>
+                                            <span>${stats.duration.toFixed(1)} hours</span>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                    </div>
+                </div>
+            `;
         }
 
         // Initialize the application when the page loads
