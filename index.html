@@ -291,16 +291,20 @@
         // Toggle event selection
         function toggleEventSelection(eventId) {
             const event = window.allEvents.find(event => event.id === eventId);
-            const metadata = {
-                stage: event.location,
+            const artist_metadata = {
                 artist: event.summary,
+            }
+            const stage_metadata = {
+                stage: event.location,
             }
             if (window.selectedEvents.has(eventId)) {
                 window.selectedEvents.delete(eventId);
-                window.sa_event('deselected', metadata);
+                window.sa_event('removeArtist', artist_metadata);
+                window.sa_event('removeAtStage', stage_metadata);
             } else {
                 window.selectedEvents.add(eventId);
-                window.sa_event('selected', metadata);
+                window.sa_event('addArtist', artist_metadata);
+                window.sa_event('addAtStage', stage_metadata);
             }
             
             updateDownloadButton();
