@@ -216,7 +216,7 @@
                 return `BEGIN:VEVENT
 DTSTART:${start}
 DTEND:${end}
-SUMMARY:${event.summary}
+SUMMARY:[${event.location}] - ${event.summary}
 LOCATION:${event.location}
 DESCRIPTION:${event.description || ''}
 END:VEVENT`;
