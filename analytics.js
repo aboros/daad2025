@@ -41,12 +41,14 @@ function initAnalytics() {
             const event = window.allEvents.find(e => e.id === eventId);
             
             if (event) {
-                sa_event(isSelected ? 'event_deselected' : 'event_selected', {
-                    event_id: eventId,
-                    event_name: event.summary,
-                    location: event.location,
-                    start_time: event.startTime
-                });
+                event_name_clean = event.summary
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+                    .replace(/[^a-zA-Z0-9_]/g, '_') // Replace special chars with underscore
+                    .replace(/_+/g, '_') // Replace multiple underscores with single
+                    .replace(/^_|_$/g, ''); // Remove leading/trailing underscores
+                tracking_event_name = isSelected ? 'event_deselected' : 'event_selected' + '_' + event_name_clean;
+                sa_event(tracking_event_name);
             }
         }
     });
