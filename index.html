@@ -340,7 +340,11 @@ END:VCALENDAR`;
 
         // Download selected events as ICS file
         function downloadSelectedEvents(events) {
-            window.sa_event('download_ics');
+            const metadata = {
+                total_events: events.length,
+                total_duration: events.reduce((sum, event) => sum + parseInt(event.duration.replace('PT', '').replace('H', '')), 0)
+            }
+            window.sa_event('download_ics', metadata);
             const icsContent = generateIcsContent(events);
             const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
             const link = document.createElement('a');
@@ -353,7 +357,11 @@ END:VCALENDAR`;
 
         // Add selected events directly to calendar
         function addToCalendar(events) {
-            window.sa_event('add_to_calendar');
+            const metadata = {
+                total_events: events.length,
+                total_duration: events.reduce((sum, event) => sum + parseInt(event.duration.replace('PT', '').replace('H', '')), 0)
+            }
+            window.sa_event('add_to_calendar', metadata);
             const icsContent = generateIcsContent(events);
             const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
             const url = URL.createObjectURL(blob);
