@@ -1,0 +1,6 @@
+*.py
+requirements.txt
+venv/
+testing/
+source-data/
+.DS_Store

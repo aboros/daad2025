@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAAD Gathering 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header with Navigation -->
+    <header class="bg-indigo-600 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold">DAAD Gathering 2025</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="index.html" class="hover:text-indigo-200 transition-colors">Browse</a></li>
+                        <li><a href="downloads.html" class="hover:text-indigo-200 transition-colors">Download</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Event Schedule</h2>
+            <p class="text-gray-600">Browse and filter all events</p>
+        </div>
+
+        <!-- Filters and Controls -->
+        <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                    <select id="dateFilter" class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="">All Dates</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Location</label>
+                    <select id="locationFilter" class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="">All Locations</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Artist</label>
+                    <input type="text" id="artistFilter" placeholder="Search artist..." class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Selection</label>
+                    <select id="selectionFilter" class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="all">All Events</option>
+                        <option value="selected">Selected Events</option>
+                        <option value="unselected">Unselected Events</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-4 flex justify-end">
+                <button id="downloadIcs" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <i class="fas fa-download mr-2"></i>Download Selected Events
+                </button>
+            </div>
+        </div>
+
+        <!-- Events Display -->
+        <div id="eventsContainer" class="bg-white rounded-lg shadow-md p-4">
+            <!-- Events will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Fetch and process events data
+        async function fetchEvents() {
+            try {
+                const response = await fetch('data/events.json');
+                const data = await response.json();
+                return data.events;
+            } catch (error) {
+                console.error('Error fetching events:', error);
+                return [];
+            }
+        }
+
+        // Format date for display
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        // Format duration
+        function formatDuration(duration) {
+            const hours = parseInt(duration.replace('PT', '').replace('H', ''));
+            return `${hours} hour${hours > 1 ? 's' : ''}`;
+        }
+
+        // Initialize the application
+        async function init() {
+            const events = await fetchEvents();
+            // Add unique IDs to events
+            events.forEach((event, index) => {
+                event.id = `${event.startTime}-${event.location}-${event.summary}`.replace(/[^a-zA-Z0-9-]/g, '-');
+            });
+            const uniqueDates = [...new Set(events.map(event => event.startTime.split('T')[0]))];
+            const uniqueLocations = [...new Set(events.map(event => event.location))];
+
+            // Initialize selected events set
+            window.selectedEvents = new Set();
+            window.allEvents = events; // Store all events for reference
+
+            // Populate date filter
+            const dateFilter = document.getElementById('dateFilter');
+            uniqueDates.forEach(date => {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = new Date(date).toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                dateFilter.appendChild(option);
+            });
+
+            // Populate location filter
+            const locationFilter = document.getElementById('locationFilter');
+            uniqueLocations.forEach(location => {
+                const option = document.createElement('option');
+                option.value = location;
+                option.textContent = location;
+                locationFilter.appendChild(option);
+            });
+
+            // Display events
+            displayEvents(events);
+
+            // Add event listeners
+            document.getElementById('dateFilter').addEventListener('change', () => filterEvents(events));
+            document.getElementById('locationFilter').addEventListener('change', () => filterEvents(events));
+            document.getElementById('artistFilter').addEventListener('input', () => filterEvents(events));
+            document.getElementById('selectionFilter').addEventListener('change', () => filterEvents(events));
+            document.getElementById('downloadIcs').addEventListener('click', () => downloadSelectedEvents(events));
+        }
+
+        // Filter events based on selected criteria
+        function filterEvents(events) {
+            console.log('filterEvents called with events count:', events.length);
+            const dateFilter = document.getElementById('dateFilter').value;
+            const locationFilter = document.getElementById('locationFilter').value;
+            const artistFilter = document.getElementById('artistFilter').value.toLowerCase();
+            const selectionFilter = document.getElementById('selectionFilter').value;
+
+            console.log('Current filters:', {
+                date: dateFilter,
+                location: locationFilter,
+                artist: artistFilter,
+                selection: selectionFilter
+            });
+
+            const filteredEvents = events.filter(event => {
+                const matchesDate = !dateFilter || event.startTime.startsWith(dateFilter);
+                const matchesLocation = !locationFilter || event.location === locationFilter;
+                const matchesArtist = !artistFilter || event.summary.toLowerCase().includes(artistFilter);
+                const matchesSelection = selectionFilter === 'all' || 
+                    (selectionFilter === 'selected' && window.selectedEvents.has(event.id)) ||
+                    (selectionFilter === 'unselected' && !window.selectedEvents.has(event.id));
+                return matchesDate && matchesLocation && matchesArtist && matchesSelection;
+            });
+
+            console.log('Filtered events count:', filteredEvents.length);
+            displayEvents(filteredEvents);
+        }
+
+        // Update download button state
+        function updateDownloadButton() {
+            const downloadButton = document.getElementById('downloadIcs');
+            downloadButton.disabled = window.selectedEvents.size === 0;
+        }
+
+        // Toggle event selection
+        function toggleEventSelection(eventId) {
+            console.log('toggleEventSelection called with eventId:', eventId);
+            console.log('Current selectedEvents before toggle:', Array.from(window.selectedEvents));
+            
+            if (window.selectedEvents.has(eventId)) {
+                window.selectedEvents.delete(eventId);
+                console.log('Event removed from selection');
+            } else {
+                window.selectedEvents.add(eventId);
+                console.log('Event added to selection');
+            }
+            
+            console.log('Current selectedEvents after toggle:', Array.from(window.selectedEvents));
+            updateDownloadButton();
+            
+            // Re-filter events to update the view
+            filterEvents(window.allEvents);
+        }
+
+        // Generate ICS content for selected events
+        function generateIcsContent(events) {
+            const selectedEvents = events.filter(event => window.selectedEvents.has(event.id));
+            const icsEvents = selectedEvents.map(event => {
+                const start = new Date(event.startTime).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+                const end = new Date(new Date(event.startTime).getTime() + parseInt(event.duration.replace('PT', '').replace('H', '')) * 60 * 60 * 1000)
+                    .toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+                
+                return `BEGIN:VEVENT
+DTSTART:${start}
+DTEND:${end}
+SUMMARY:${event.summary}
+LOCATION:${event.location}
+DESCRIPTION:${event.description || ''}
+END:VEVENT`;
+            }).join('\n');
+
+            return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DAAD Gathering 2025//EN
+${icsEvents}
+END:VCALENDAR`;
+        }
+
+        // Download selected events as ICS file
+        function downloadSelectedEvents(events) {
+            const icsContent = generateIcsContent(events);
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'daad-gathering-2025-selected-events.ics';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Display events in the current view
+        function displayEvents(events) {
+            const container = document.getElementById('eventsContainer');
+            displayListView(events, container);
+        }
+
+        // Display events in list view
+        function displayListView(events, container) {
+            console.log('displayListView called with events count:', events.length);
+            const groupedEvents = groupEventsByLocation(events);
+            container.innerHTML = '';
+
+            Object.entries(groupedEvents).forEach(([location, locationEvents]) => {
+                console.log(`Rendering location: ${location} with ${locationEvents.length} events`);
+                const locationSection = document.createElement('div');
+                locationSection.className = 'mb-6';
+                locationSection.innerHTML = `
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">${location}</h2>
+                    <div class="space-y-2">
+                        ${locationEvents.map(event => {
+                            const isSelected = window.selectedEvents.has(event.id);
+                            console.log(`Event ${event.id} selection state:`, isSelected);
+                            return `
+                            <div class="p-4 rounded-md transition-colors cursor-pointer border-2 ${isSelected ? 'bg-indigo-50 border-indigo-500' : 'bg-gray-50 border-transparent hover:bg-gray-100'}"
+                                 onclick="toggleEventSelection('${event.id}')">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start space-x-3">
+                                        <input type="checkbox" 
+                                               class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded cursor-pointer"
+                                               ${isSelected ? 'checked' : ''}
+                                               onclick="event.stopPropagation()"
+                                               onchange="toggleEventSelection('${event.id}')">
+                                        <div>
+                                            <h3 class="font-medium text-gray-900">${event.summary}</h3>
+                                            <p class="text-sm text-gray-600">${formatDate(event.startTime)}</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-500">${formatDuration(event.duration)}</span>
+                                </div>
+                            </div>`;
+                        }).join('')}
+                    </div>
+                `;
+                container.appendChild(locationSection);
+            });
+        }
+
+        // Group events by location
+        function groupEventsByLocation(events) {
+            return events.reduce((groups, event) => {
+                if (!groups[event.location]) {
+                    groups[event.location] = [];
+                }
+                groups[event.location].push(event);
+                return groups;
+            }, {});
+        }
+
+        // Initialize the application when the page loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html> 
