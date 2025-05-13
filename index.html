@@ -103,6 +103,13 @@
             try {
                 const response = await fetch('data/events.json');
                 const data = await response.json();
+                data.events.forEach(event => {
+                    event.clean_title = event.summary
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]/g, '_')
+                        .replace(/_+/g, '_')
+                        .replace(/^_|_$/g, '');
+                });
                 return data.events;
             } catch (error) {
                 
@@ -144,11 +151,6 @@
             // Add unique IDs to events
             events.forEach((event, index) => {
                 event.id = `${event.startTime}-${event.location}-${event.summary}`.replace(/[^a-zA-Z0-9-]/g, '-');
-                sa_event('event_clicked', {
-                    event_name: event.summary,
-                    location: event.location,
-                    timestamp: new Date().toISOString()
-                }, console.log('[TRACKING] event_clicked', event.summary, event.location, new Date().toISOString()));
             });
             const uniqueDates = [...new Set(events.map(event => event.startTime.split('T')[0]))];
             const uniqueLocations = [...new Set(events.map(event => event.location))];
@@ -281,17 +283,15 @@
 
         // Toggle event selection
         function toggleEventSelection(eventId) {
-            
-            
+            const event = window.allEvents.find(event => event.id === eventId);
             
             if (window.selectedEvents.has(eventId)) {
                 window.selectedEvents.delete(eventId);
-                
+                window.sa_event('deselected_' + event.clean_title);
             } else {
                 window.selectedEvents.add(eventId);
-                
+                window.sa_event('selected_' + event.clean_title);
             }
-            
             
             updateDownloadButton();
             updateSelectionOverview(window.allEvents);
