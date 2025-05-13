@@ -212,8 +212,9 @@
         function filterEvents(events, clickedFilterName) {
             if (clickedFilterName) {
                 filter_value = document.getElementById(clickedFilterName).value;
-                filter_value = filter_value.replace(/[^a-zA-Z0-9_]/g, '');
-                window.sa_event(clickedFilterName + '_' + filter_value);
+                window.sa_event(clickedFilterName, {
+                    filter_value: filter_value
+                });
             }
             const dateFilter = document.getElementById('dateFilter').value;
             const locationFilter = document.getElementById('locationFilter').value;
