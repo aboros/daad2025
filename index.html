@@ -100,8 +100,18 @@
 
         // Format duration
         function formatDuration(duration) {
-            const hours = parseInt(duration.replace('PT', '').replace('H', ''));
-            return `${hours} hour${hours > 1 ? 's' : ''}`;
+            const hoursMatch = duration.match(/(\d+)H/);
+            const minutesMatch = duration.match(/(\d+)M/);
+            const hours = hoursMatch ? parseInt(hoursMatch[1]) : 0;
+            const minutes = minutesMatch ? parseInt(minutesMatch[1]) : 0;
+            
+            if (hours === 0) {
+                return `${minutes} minute${minutes !== 1 ? 's' : ''}`;
+            } else if (minutes === 0) {
+                return `${hours} hour${hours !== 1 ? 's' : ''}`;
+            } else {
+                return `${hours} hour${hours !== 1 ? 's' : ''} ${minutes} minute${minutes !== 1 ? 's' : ''}`;
+            }
         }
 
         // Initialize the application

@@ -2,21 +2,21 @@
   "events": [
     {
       "startTime": "2025-07-24T19:30:00",
-      "duration": "PT1H",
+      "duration": "PT30M",
       "summary": "Opening Ceremony",
       "location": "DAAD STAGE",
       "description": ""
     },
     {
       "startTime": "2025-07-24T20:00:00",
-      "duration": "PT2H30M",
+      "duration": "PT1H30M",
       "summary": "Octave One",
       "location": "DAAD STAGE",
       "description": ""
     },
     {
       "startTime": "2025-07-24T21:30:00",
-      "duration": "PT2H30M",
+      "duration": "PT1H30M",
       "summary": "ISU",
       "location": "DAAD STAGE",
       "description": ""
@@ -51,7 +51,7 @@
     },
     {
       "startTime": "2025-07-25T20:00:00",
-      "duration": "PT2H30M",
+      "duration": "PT1H30M",
       "summary": "Indirect Movement",
       "location": "DAAD STAGE",
       "description": ""
@@ -93,7 +93,7 @@
     },
     {
       "startTime": "2025-07-26T20:00:00",
-      "duration": "PT2H30M",
+      "duration": "PT1H30M",
       "summary": "Fourk",
       "location": "DAAD STAGE",
       "description": ""
@@ -366,7 +366,7 @@
     },
     {
       "startTime": "2025-07-26T01:30:00",
-      "duration": "PT1H30M",
+      "duration": "PT25H30M",
       "summary": "Shaymi",
       "location": "DRAGON NEST",
       "description": ""
@@ -556,7 +556,7 @@
     {
       "startTime": "2025-07-26T12:00:00",
       "duration": "PT2H",
-      "summary": "Kühl",
+      "summary": "K\u00fchl",
       "location": "AM/BEACH",
       "description": ""
     },
@@ -596,4 +596,4 @@
       "description": ""
     }
   ]
-} 
+}
