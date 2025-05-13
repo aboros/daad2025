@@ -65,34 +65,31 @@
         <!-- Selection Overview Panel -->
         <div id="selectionOverview" class="fixed bottom-0 left-0 right-0 bg-black shadow-lg border-t border-gray-200 p-4 transform transition-transform duration-300 translate-y-full">
             <div class="container mx-auto">
-                <div class="flex items-center justify-between">
-                    <div class="flex-1">
-                        <div class="flex items-center space-x-8">
-                            <div class="flex items-center space-x-4">
-                                <p class="text-gray-700">
-                                    <span class="font-medium">Total Events:</span>
-                                    <span id="totalEvents" class="ml-2">0</span>
-                                </p>
-                                <p class="text-gray-700">
-                                    <span class="font-medium">Total Duration:</span>
-                                    <span id="totalDuration" class="ml-2">0 hours</span>
-                                </p>
-                            </div>
-                            <button id="toggleDetails" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium flex items-center">
-                                <span>Details</span>
-                                <i class="fas fa-chevron-down ml-1 transform transition-transform duration-200"></i>
-                            </button>
-                        </div>
+                <div class="space-y-4">
+                    <div class="space-y-2">
+                        <p class="text-white">
+                            <span class="font-medium">Events Selected:</span>
+                            <span id="totalEvents" class="ml-2">0</span>
+                        </p>
+                        <p class="text-white">
+                            <span class="font-medium">Total Duration:</span>
+                            <span id="totalDuration" class="ml-2">0 hours</span>
+                        </p>
+                    </div>
+                    <div>
+                        <button id="toggleDetails" class="text-white hover:text-gray-300 text-sm font-medium flex items-center">
+                            <span>By stage</span>
+                            <i class="fas fa-chevron-down ml-1 transform transition-transform duration-200"></i>
+                        </button>
                         <div id="stageDetails" class="mt-4 hidden">
-                            <div class="border-t border-gray-200 pt-4">
-                                <h4 class="text-sm font-medium text-gray-600 mb-2">Events by Stage</h4>
+                            <div class="border-t border-gray-700 pt-4">
                                 <div id="stageStats" class="space-y-2">
                                     <!-- Stage statistics will be inserted here -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center space-x-4 ml-8">
+                    <div class="flex justify-end space-x-4">
                         <button id="addToCalendar" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
                             <i class="fas fa-calendar-plus mr-2"></i>Add to Calendar
                         </button>
@@ -283,18 +280,7 @@
             });
             
             // Update stage statistics
-            const stageStatsContainer = document.getElementById('stageStats');
-            stageStatsContainer.innerHTML = Object.entries(stageStats)
-                .map(([stage, stats]) => `
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-700">${stage}</span>
-                        <div class="text-sm text-gray-600">
-                            <span>${stats.count} events</span>
-                            <span class="mx-2">•</span>
-                            <span>${stats.duration.toFixed(1)} hours</span>
-                        </div>
-                    </div>
-                `).join('');
+            updateStageStats(stageStats);
             
             // Update total statistics
             const totalEvents = selectedEvents.length;
@@ -432,6 +418,22 @@ END:VCALENDAR`;
                 groups[event.location].push(event);
                 return groups;
             }, {});
+        }
+
+        // Update stage statistics
+        function updateStageStats(stageStats) {
+            const stageStatsContainer = document.getElementById('stageStats');
+            stageStatsContainer.innerHTML = Object.entries(stageStats)
+                .map(([stage, stats]) => `
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">${stage}</span>
+                        <div class="text-sm text-gray-400">
+                            <span>${stats.count} events</span>
+                            <span class="mx-2">•</span>
+                            <span>${stats.duration.toFixed(1)} hours</span>
+                        </div>
+                    </div>
+                `).join('');
         }
 
         // Initialize the application when the page loads
