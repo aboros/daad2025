@@ -2,6 +2,7 @@
   "events": [
     {
       "startTime": "2025-06-19T19:30:00",
+      "endTime": "2025-06-19T20:00:00",
       "duration": "PT30M",
       "summary": "Opening Ceremony",
       "location": "DAAD STAGE",
@@ -9,6 +10,7 @@
     },
     {
       "startTime": "2025-06-19T20:00:00",
+      "endTime": "2025-06-19T21:30:00",
       "duration": "PT1H30M",
       "summary": "Octave One",
       "location": "DAAD STAGE",
@@ -16,6 +18,7 @@
     },
     {
       "startTime": "2025-06-19T21:30:00",
+      "endTime": "2025-06-19T23:00:00",
       "duration": "PT1H30M",
       "summary": "ISU",
       "location": "DAAD STAGE",
@@ -23,6 +26,7 @@
     },
     {
       "startTime": "2025-06-19T23:00:00",
+      "endTime": "2025-06-20T01:00:00",
       "duration": "PT2H",
       "summary": "Speedy J",
       "location": "DAAD STAGE",
@@ -30,6 +34,7 @@
     },
     {
       "startTime": "2025-06-20T01:00:00",
+      "endTime": "2025-06-20T03:00:00",
       "duration": "PT2H",
       "summary": "Dave Clark",
       "location": "DAAD STAGE",
@@ -37,6 +42,7 @@
     },
     {
       "startTime": "2025-06-20T03:00:00",
+      "endTime": "2025-06-20T05:00:00",
       "duration": "PT2H",
       "summary": "D. Dan",
       "location": "DAAD STAGE",
@@ -44,6 +50,7 @@
     },
     {
       "startTime": "2025-06-20T05:00:00",
+      "endTime": "2025-06-20T07:00:00",
       "duration": "PT2H",
       "summary": "Philippa Pacho",
       "location": "DAAD STAGE",
@@ -51,6 +58,7 @@
     },
     {
       "startTime": "2025-06-20T20:00:00",
+      "endTime": "2025-06-20T21:30:00",
       "duration": "PT1H30M",
       "summary": "Indirect Movement",
       "location": "DAAD STAGE",
@@ -58,6 +66,7 @@
     },
     {
       "startTime": "2025-06-20T21:30:00",
+      "endTime": "2025-06-20T23:30:00",
       "duration": "PT2H",
       "summary": "Peter van Hosen",
       "location": "DAAD STAGE",
@@ -65,6 +74,7 @@
     },
     {
       "startTime": "2025-06-20T23:30:00",
+      "endTime": "2025-06-21T01:30:00",
       "duration": "PT2H",
       "summary": "Luke Slater",
       "location": "DAAD STAGE",
@@ -72,6 +82,7 @@
     },
     {
       "startTime": "2025-06-21T01:30:00",
+      "endTime": "2025-06-21T03:30:00",
       "duration": "PT2H",
       "summary": "Jeff Mills",
       "location": "DAAD STAGE",
@@ -79,6 +90,7 @@
     },
     {
       "startTime": "2025-06-21T03:30:00",
+      "endTime": "2025-06-21T05:00:00",
       "duration": "PT1H30M",
       "summary": "Answer Code Request",
       "location": "DAAD STAGE",
@@ -86,6 +98,7 @@
     },
     {
       "startTime": "2025-06-21T05:00:00",
+      "endTime": "2025-06-21T07:00:00",
       "duration": "PT2H",
       "summary": "Adriana Lopez",
       "location": "DAAD STAGE",
@@ -93,6 +106,7 @@
     },
     {
       "startTime": "2025-06-21T20:00:00",
+      "endTime": "2025-06-21T21:30:00",
       "duration": "PT1H30M",
       "summary": "Fourk",
       "location": "DAAD STAGE",
@@ -100,6 +114,7 @@
     },
     {
       "startTime": "2025-06-21T21:30:00",
+      "endTime": "2025-06-21T23:00:00",
       "duration": "PT1H30M",
       "summary": "Katamii",
       "location": "DAAD STAGE",
@@ -107,6 +122,7 @@
     },
     {
       "startTime": "2025-06-21T23:00:00",
+      "endTime": "2025-06-22T01:00:00",
       "duration": "PT2H",
       "summary": "Quelza",
       "location": "DAAD STAGE",
@@ -114,6 +130,7 @@
     },
     {
       "startTime": "2025-06-22T01:00:00",
+      "endTime": "2025-06-22T03:00:00",
       "duration": "PT2H",
       "summary": "DVS1",
       "location": "DAAD STAGE",
@@ -121,6 +138,7 @@
     },
     {
       "startTime": "2025-06-22T03:00:00",
+      "endTime": "2025-06-22T05:00:00",
       "duration": "PT2H",
       "summary": "Marron",
       "location": "DAAD STAGE",
@@ -128,6 +146,7 @@
     },
     {
       "startTime": "2025-06-22T05:00:00",
+      "endTime": "2025-06-22T07:00:00",
       "duration": "PT2H",
       "summary": "Inox Traxx",
       "location": "DAAD STAGE",
@@ -135,6 +154,7 @@
     },
     {
       "startTime": "2025-06-19T21:00:00",
+      "endTime": "2025-06-19T23:00:00",
       "duration": "PT2H",
       "summary": "Jaffa Surfa",
       "location": "THE DOME",
@@ -142,6 +162,7 @@
     },
     {
       "startTime": "2025-06-19T23:00:00",
+      "endTime": "2025-06-20T01:00:00",
       "duration": "PT2H",
       "summary": "Cassy",
       "location": "THE DOME",
@@ -149,6 +170,7 @@
     },
     {
       "startTime": "2025-06-20T01:00:00",
+      "endTime": "2025-06-20T03:00:00",
       "duration": "PT2H",
       "summary": "Magda",
       "location": "THE DOME",
@@ -156,6 +178,7 @@
     },
     {
       "startTime": "2025-06-20T03:00:00",
+      "endTime": "2025-06-20T05:00:00",
       "duration": "PT2H",
       "summary": "Chaos in the CBD",
       "location": "THE DOME",
@@ -163,6 +186,7 @@
     },
     {
       "startTime": "2025-06-20T05:00:00",
+      "endTime": "2025-06-20T06:30:00",
       "duration": "PT1H30M",
       "summary": "Grema",
       "location": "THE DOME",
@@ -170,6 +194,7 @@
     },
     {
       "startTime": "2025-06-20T06:30:00",
+      "endTime": "2025-06-20T08:00:00",
       "duration": "PT1H30M",
       "summary": "Peter Bernath",
       "location": "THE DOME",
@@ -177,6 +202,7 @@
     },
     {
       "startTime": "2025-06-20T19:00:00",
+      "endTime": "2025-06-20T20:00:00",
       "duration": "PT1H",
       "summary": "AIWA",
       "location": "THE DOME",
@@ -184,6 +210,7 @@
     },
     {
       "startTime": "2025-06-20T20:00:00",
+      "endTime": "2025-06-20T22:00:00",
       "duration": "PT2H",
       "summary": "Out of Place Artefacts",
       "location": "THE DOME",
@@ -191,6 +218,7 @@
     },
     {
       "startTime": "2025-06-20T22:00:00",
+      "endTime": "2025-06-21T00:00:00",
       "duration": "PT2H",
       "summary": "Blazej Malinowski",
       "location": "THE DOME",
@@ -198,6 +226,7 @@
     },
     {
       "startTime": "2025-06-21T00:00:00",
+      "endTime": "2025-06-21T02:00:00",
       "duration": "PT2H",
       "summary": "Tobias",
       "location": "THE DOME",
@@ -205,6 +234,7 @@
     },
     {
       "startTime": "2025-06-21T02:00:00",
+      "endTime": "2025-06-21T04:00:00",
       "duration": "PT2H",
       "summary": "Aurora Halal",
       "location": "THE DOME",
@@ -212,6 +242,7 @@
     },
     {
       "startTime": "2025-06-21T04:00:00",
+      "endTime": "2025-06-21T06:00:00",
       "duration": "PT2H",
       "summary": "TSU",
       "location": "THE DOME",
@@ -219,6 +250,7 @@
     },
     {
       "startTime": "2025-06-21T06:00:00",
+      "endTime": "2025-06-21T08:00:00",
       "duration": "PT2H",
       "summary": "Switch Nollie",
       "location": "THE DOME",
@@ -226,6 +258,7 @@
     },
     {
       "startTime": "2025-06-21T19:00:00",
+      "endTime": "2025-06-21T21:00:00",
       "duration": "PT2H",
       "summary": "Imre Kiss",
       "location": "THE DOME",
@@ -233,6 +266,7 @@
     },
     {
       "startTime": "2025-06-21T21:00:00",
+      "endTime": "2025-06-21T23:00:00",
       "duration": "PT2H",
       "summary": "Crimson",
       "location": "THE DOME",
@@ -240,6 +274,7 @@
     },
     {
       "startTime": "2025-06-21T23:00:00",
+      "endTime": "2025-06-22T00:30:00",
       "duration": "PT1H30M",
       "summary": "Legowelt",
       "location": "THE DOME",
@@ -247,6 +282,7 @@
     },
     {
       "startTime": "2025-06-22T00:30:00",
+      "endTime": "2025-06-22T02:30:00",
       "duration": "PT2H",
       "summary": "Marco Shuttle",
       "location": "THE DOME",
@@ -254,6 +290,7 @@
     },
     {
       "startTime": "2025-06-22T02:30:00",
+      "endTime": "2025-06-22T04:30:00",
       "duration": "PT2H",
       "summary": "Polygonia",
       "location": "THE DOME",
@@ -261,6 +298,7 @@
     },
     {
       "startTime": "2025-06-22T04:30:00",
+      "endTime": "2025-06-22T06:30:00",
       "duration": "PT2H",
       "summary": "AzaMirmur",
       "location": "THE DOME",
@@ -268,6 +306,7 @@
     },
     {
       "startTime": "2025-06-22T06:30:00",
+      "endTime": "2025-06-22T08:00:00",
       "duration": "PT1H30M",
       "summary": "Roland Handrick",
       "location": "THE DOME",
@@ -275,6 +314,7 @@
     },
     {
       "startTime": "2025-06-22T15:00:00",
+      "endTime": "2025-06-22T17:00:00",
       "duration": "PT2H",
       "summary": "Zvezda Beta",
       "location": "THE DOME",
@@ -282,6 +322,7 @@
     },
     {
       "startTime": "2025-06-22T17:00:00",
+      "endTime": "2025-06-22T20:00:00",
       "duration": "PT3H",
       "summary": "Carl Craig",
       "location": "THE DOME",
@@ -289,6 +330,7 @@
     },
     {
       "startTime": "2025-06-19T21:30:00",
+      "endTime": "2025-06-19T23:30:00",
       "duration": "PT2H",
       "summary": "UNKLE",
       "location": "DRAGON NEST",
@@ -296,6 +338,7 @@
     },
     {
       "startTime": "2025-06-19T23:30:00",
+      "endTime": "2025-06-20T01:30:00",
       "duration": "PT2H",
       "summary": "Acid Pauli",
       "location": "DRAGON NEST",
@@ -303,6 +346,7 @@
     },
     {
       "startTime": "2025-06-20T01:30:00",
+      "endTime": "2025-06-20T03:30:00",
       "duration": "PT2H",
       "summary": "Adam Ten",
       "location": "DRAGON NEST",
@@ -310,6 +354,7 @@
     },
     {
       "startTime": "2025-06-20T18:00:00",
+      "endTime": "2025-06-20T20:00:00",
       "duration": "PT2H",
       "summary": "Mantra",
       "location": "DRAGON NEST",
@@ -317,6 +362,7 @@
     },
     {
       "startTime": "2025-06-20T20:00:00",
+      "endTime": "2025-06-20T22:00:00",
       "duration": "PT2H",
       "summary": "Netam",
       "location": "DRAGON NEST",
@@ -324,6 +370,7 @@
     },
     {
       "startTime": "2025-06-20T22:00:00",
+      "endTime": "2025-06-20T23:30:00",
       "duration": "PT1H30M",
       "summary": "Hraach",
       "location": "DRAGON NEST",
@@ -331,6 +378,7 @@
     },
     {
       "startTime": "2025-06-20T23:30:00",
+      "endTime": "2025-06-21T02:30:00",
       "duration": "PT3H",
       "summary": "Oliver Koletzki",
       "location": "DRAGON NEST",
@@ -338,6 +386,7 @@
     },
     {
       "startTime": "2025-06-21T18:00:00",
+      "endTime": "2025-06-21T19:30:00",
       "duration": "PT1H30M",
       "summary": "OIEE",
       "location": "DRAGON NEST",
@@ -345,6 +394,7 @@
     },
     {
       "startTime": "2025-06-21T19:30:00",
+      "endTime": "2025-06-21T21:30:00",
       "duration": "PT2H",
       "summary": "Fine Cut Bodies",
       "location": "DRAGON NEST",
@@ -352,6 +402,7 @@
     },
     {
       "startTime": "2025-06-21T21:30:00",
+      "endTime": "2025-06-21T23:30:00",
       "duration": "PT2H",
       "summary": "Freq Nasty",
       "location": "DRAGON NEST",
@@ -359,6 +410,7 @@
     },
     {
       "startTime": "2025-06-21T23:30:00",
+      "endTime": "2025-06-22T01:30:00",
       "duration": "PT2H",
       "summary": "Goldie & Medic Mc",
       "location": "DRAGON NEST",
@@ -366,6 +418,7 @@
     },
     {
       "startTime": "2025-06-22T01:30:00",
+      "endTime": "2025-06-22T03:00:00",
       "duration": "PT1H30M",
       "summary": "Shaymi",
       "location": "DRAGON NEST",
@@ -373,6 +426,7 @@
     },
     {
       "startTime": "2025-06-22T19:30:00",
+      "endTime": "2025-06-22T21:30:00",
       "duration": "PT2H",
       "summary": "Mira",
       "location": "DRAGON NEST",
@@ -380,6 +434,7 @@
     },
     {
       "startTime": "2025-06-22T21:30:00",
+      "endTime": "2025-06-22T23:30:00",
       "duration": "PT2H",
       "summary": "WHOMADEWHO",
       "location": "DRAGON NEST",
@@ -387,6 +442,7 @@
     },
     {
       "startTime": "2025-06-18T20:00:00",
+      "endTime": "2025-06-18T22:00:00",
       "duration": "PT2H",
       "summary": "Moonbase Patel Disco",
       "location": "COOKING GROOVE",
@@ -394,6 +450,7 @@
     },
     {
       "startTime": "2025-06-18T22:00:00",
+      "endTime": "2025-06-19T00:00:00",
       "duration": "PT2H",
       "summary": "Tolo & Falcao",
       "location": "COOKING GROOVE",
@@ -401,6 +458,7 @@
     },
     {
       "startTime": "2025-06-19T00:00:00",
+      "endTime": "2025-06-19T03:00:00",
       "duration": "PT3H",
       "summary": "Gerd Janson",
       "location": "COOKING GROOVE",
@@ -408,6 +466,7 @@
     },
     {
       "startTime": "2025-06-19T03:00:00",
+      "endTime": "2025-06-19T06:00:00",
       "duration": "PT3H",
       "summary": "Mano Le Tough",
       "location": "COOKING GROOVE",
@@ -415,6 +474,7 @@
     },
     {
       "startTime": "2025-06-20T10:00:00",
+      "endTime": "2025-06-20T12:00:00",
       "duration": "PT2H",
       "summary": "Stee",
       "location": "COOKING GROOVE",
@@ -422,6 +482,7 @@
     },
     {
       "startTime": "2025-06-20T12:00:00",
+      "endTime": "2025-06-20T14:00:00",
       "duration": "PT2H",
       "summary": "Modul aka Mango",
       "location": "COOKING GROOVE",
@@ -429,6 +490,7 @@
     },
     {
       "startTime": "2025-06-20T14:00:00",
+      "endTime": "2025-06-20T16:00:00",
       "duration": "PT2H",
       "summary": "Hiboo & Dinza",
       "location": "COOKING GROOVE",
@@ -436,6 +498,7 @@
     },
     {
       "startTime": "2025-06-21T10:00:00",
+      "endTime": "2025-06-21T12:00:00",
       "duration": "PT2H",
       "summary": "Daniel Moritz",
       "location": "COOKING GROOVE",
@@ -443,6 +506,7 @@
     },
     {
       "startTime": "2025-06-21T12:00:00",
+      "endTime": "2025-06-21T14:00:00",
       "duration": "PT2H",
       "summary": "Daniel Santiago",
       "location": "COOKING GROOVE",
@@ -450,6 +514,7 @@
     },
     {
       "startTime": "2025-06-21T14:00:00",
+      "endTime": "2025-06-21T16:00:00",
       "duration": "PT2H",
       "summary": "Daniel Ban",
       "location": "COOKING GROOVE",
@@ -457,6 +522,7 @@
     },
     {
       "startTime": "2025-06-22T10:00:00",
+      "endTime": "2025-06-22T12:00:00",
       "duration": "PT2H",
       "summary": "Booshanka",
       "location": "COOKING GROOVE",
@@ -464,6 +530,7 @@
     },
     {
       "startTime": "2025-06-22T12:00:00",
+      "endTime": "2025-06-22T14:00:00",
       "duration": "PT2H",
       "summary": "Baladi",
       "location": "COOKING GROOVE",
@@ -471,6 +538,7 @@
     },
     {
       "startTime": "2025-06-22T14:00:00",
+      "endTime": "2025-06-22T16:00:00",
       "duration": "PT2H",
       "summary": "MEO Culpa & Zakharov",
       "location": "COOKING GROOVE",
@@ -478,6 +546,7 @@
     },
     {
       "startTime": "2025-06-23T00:00:00",
+      "endTime": "2025-06-23T04:00:00",
       "duration": "PT4H",
       "summary": "OVERCOOKING",
       "location": "COOKING GROOVE",
@@ -485,6 +554,7 @@
     },
     {
       "startTime": "2025-06-19T08:00:00",
+      "endTime": "2025-06-19T10:00:00",
       "duration": "PT2H",
       "summary": "Ferenc Szanaty",
       "location": "AM/BEACH",
@@ -492,6 +562,7 @@
     },
     {
       "startTime": "2025-06-19T10:00:00",
+      "endTime": "2025-06-19T12:00:00",
       "duration": "PT2H",
       "summary": "Garpo",
       "location": "AM/BEACH",
@@ -499,6 +570,7 @@
     },
     {
       "startTime": "2025-06-19T12:00:00",
+      "endTime": "2025-06-19T15:00:00",
       "duration": "PT3H",
       "summary": "Kirill & Kernel",
       "location": "AM/BEACH",
@@ -506,6 +578,7 @@
     },
     {
       "startTime": "2025-06-19T15:00:00",
+      "endTime": "2025-06-19T18:00:00",
       "duration": "PT3H",
       "summary": "Vatsanah & Dj Reload",
       "location": "AM/BEACH",
@@ -513,6 +586,7 @@
     },
     {
       "startTime": "2025-06-20T08:00:00",
+      "endTime": "2025-06-20T11:00:00",
       "duration": "PT3H",
       "summary": "Rising Love Records",
       "location": "AM/BEACH",
@@ -520,6 +594,7 @@
     },
     {
       "startTime": "2025-06-20T11:00:00",
+      "endTime": "2025-06-20T13:00:00",
       "duration": "PT2H",
       "summary": "Telemala",
       "location": "AM/BEACH",
@@ -527,6 +602,7 @@
     },
     {
       "startTime": "2025-06-20T13:00:00",
+      "endTime": "2025-06-20T15:00:00",
       "duration": "PT2H",
       "summary": "Adis is OK",
       "location": "AM/BEACH",
@@ -534,6 +610,7 @@
     },
     {
       "startTime": "2025-06-20T15:00:00",
+      "endTime": "2025-06-20T18:00:00",
       "duration": "PT3H",
       "summary": "Vedat Akdag",
       "location": "AM/BEACH",
@@ -541,6 +618,7 @@
     },
     {
       "startTime": "2025-06-21T08:00:00",
+      "endTime": "2025-06-21T10:00:00",
       "duration": "PT2H",
       "summary": "Candyman de Marquis",
       "location": "AM/BEACH",
@@ -548,6 +626,7 @@
     },
     {
       "startTime": "2025-06-21T10:00:00",
+      "endTime": "2025-06-21T12:00:00",
       "duration": "PT2H",
       "summary": "James Cole",
       "location": "AM/BEACH",
@@ -555,6 +634,7 @@
     },
     {
       "startTime": "2025-06-21T12:00:00",
+      "endTime": "2025-06-21T14:00:00",
       "duration": "PT2H",
       "summary": "K\u00fchl",
       "location": "AM/BEACH",
@@ -562,6 +642,7 @@
     },
     {
       "startTime": "2025-06-21T14:00:00",
+      "endTime": "2025-06-21T16:00:00",
       "duration": "PT2H",
       "summary": "Chriss Ronson",
       "location": "AM/BEACH",
@@ -569,6 +650,7 @@
     },
     {
       "startTime": "2025-06-21T16:00:00",
+      "endTime": "2025-06-21T18:00:00",
       "duration": "PT2H",
       "summary": "Budai",
       "location": "AM/BEACH",
@@ -576,6 +658,7 @@
     },
     {
       "startTime": "2025-06-22T08:00:00",
+      "endTime": "2025-06-22T10:30:00",
       "duration": "PT2H30M",
       "summary": "Woody & GraBo",
       "location": "AM/BEACH",
@@ -583,6 +666,7 @@
     },
     {
       "startTime": "2025-06-22T10:30:00",
+      "endTime": "2025-06-22T12:30:00",
       "duration": "PT2H",
       "summary": "Metha",
       "location": "AM/BEACH",
@@ -590,6 +674,7 @@
     },
     {
       "startTime": "2025-06-22T12:30:00",
+      "endTime": "2025-06-22T15:00:00",
       "duration": "PT2H30M",
       "summary": "Secret Factory",
       "location": "AM/BEACH",

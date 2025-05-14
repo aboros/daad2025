@@ -318,9 +318,8 @@
         function generateIcsContent(events) {
             const selectedEvents = events.filter(event => window.selectedEvents.has(event.id));
             const icsEvents = selectedEvents.map(event => {
-                const start = new Date(event.startTime).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-                const end = new Date(new Date(event.startTime).getTime() + parseInt(event.duration.replace('PT', '').replace('H', '')) * 60 * 60 * 1000)
-                    .toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+                const start = new Date(event.startTime).toISOString().replace(/[-:]/g, '').split('.')[0];
+                const end = new Date(event.endTime).toISOString().replace(/[-:]/g, '').split('.')[0];
                 
                 return `BEGIN:VEVENT
 DTSTART:${start}
@@ -334,6 +333,8 @@ END:VEVENT`;
             return `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//DAAD Gathering 2025//EN
+X-WR-CALNAME:DAAD Gathering 2025
+X-WR-TIMEZONE:Europe/Berlin
 ${icsEvents}
 END:VCALENDAR`;
         }
