@@ -86,6 +86,9 @@
                         <button id="downloadIcs" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
                             <i class="fas fa-download mr-2"></i>Download as ICS
                         </button>
+                        <button id="saveSelections" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <i class="fas fa-save mr-2"></i>Save Selections
+                        </button>
                     </div>
                 </div>
             </div>
@@ -155,9 +158,19 @@
             const uniqueDates = [...new Set(events.map(event => event.startTime.split('T')[0]))];
             const uniqueLocations = [...new Set(events.map(event => event.location))];
 
-            // Initialize selected events set
-            window.selectedEvents = new Set();
+            // Initialize selected events set from localStorage or create new Set
+            const savedSelections = localStorage.getItem('daadSelectedEvents');
+            window.selectedEvents = new Set(savedSelections ? JSON.parse(savedSelections) : []);
+            window.lastSavedState = new Set(window.selectedEvents); // Track last saved state
             window.allEvents = events; // Store all events for reference
+
+            // Show selection overview panel and enable buttons if there are saved selections
+            if (window.selectedEvents.size > 0) {
+                const overviewPanel = document.getElementById('selectionOverview');
+                overviewPanel.classList.remove('translate-y-full');
+                updateSelectionOverview(events);
+                updateDownloadButton();
+            }
 
             // Populate date filter
             const dateFilter = document.getElementById('dateFilter');
@@ -191,6 +204,7 @@
             document.getElementById('selectionFilter').addEventListener('change', () => filterEvents(events, 'selectionFilter'));
             document.getElementById('downloadIcs').addEventListener('click', () => downloadSelectedEvents(events));
             document.getElementById('addToCalendar').addEventListener('click', () => addToCalendar(events));
+            document.getElementById('saveSelections').addEventListener('click', () => saveSelections());
             
             // Add toggle details event listener
             document.getElementById('toggleDetails').addEventListener('click', () => {
@@ -239,9 +253,22 @@
         function updateDownloadButton() {
             const downloadButton = document.getElementById('downloadIcs');
             const addToCalendarButton = document.getElementById('addToCalendar');
-            const isDisabled = window.selectedEvents.size === 0;
-            downloadButton.disabled = isDisabled;
-            addToCalendarButton.disabled = isDisabled;
+            const saveButton = document.getElementById('saveSelections');
+            const hasSelections = window.selectedEvents.size > 0;
+            const hasUnsavedChanges = !areSetsEqual(window.selectedEvents, window.lastSavedState);
+            
+            downloadButton.disabled = !hasSelections;
+            addToCalendarButton.disabled = !hasSelections;
+            saveButton.disabled = !hasUnsavedChanges;
+        }
+
+        // Helper function to compare two Sets
+        function areSetsEqual(set1, set2) {
+            if (set1.size !== set2.size) return false;
+            for (const item of set1) {
+                if (!set2.has(item)) return false;
+            }
+            return true;
         }
 
         // Update selection overview
@@ -502,6 +529,31 @@ END:VCALENDAR`;
                     </div>
                 </div>
             `;
+        }
+
+        // Save selections to localStorage
+        function saveSelections() {
+            const metadata = {
+                total_events: window.selectedEvents.size
+            }
+            window.sa_event('save_selections', metadata);
+            localStorage.setItem('daadSelectedEvents', JSON.stringify([...window.selectedEvents]));
+            window.lastSavedState = new Set(window.selectedEvents); // Update last saved state
+            
+            // Show a temporary success message
+            const saveButton = document.getElementById('saveSelections');
+            const originalText = saveButton.innerHTML;
+            saveButton.innerHTML = '<i class="fas fa-check mr-2"></i>Saved!';
+            saveButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            saveButton.classList.add('bg-green-600', 'hover:bg-green-700');
+            
+            setTimeout(() => {
+                saveButton.innerHTML = originalText;
+                saveButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+                saveButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            }, 2000);
+
+            updateDownloadButton(); // Update button states after saving
         }
 
         // Initialize the application when the page loads
